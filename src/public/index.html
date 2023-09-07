@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página de inicio</title>
+</head>
+<body>
+
+    <h1>Bienvenido a nuestra tienda en línea</h1>
+    <p>Explore nuestros productos y realice su compra de forma segura con Stripe.</p>
+    <button id="pago">
+        Pagar con stripe
+    </button>
+    
+    <script>
+       const button = document.getElementById('pago');
+       button.addEventListener('click', async () => {
+              const res = await fetch('/crear-orden-compra', {
+                 method: 'POST',
+                 });
+                 const data = await res.json();
+                 console.log(data);
+                 window.location.href = data.url;
+       });
+    </script>
+</body>
+</html>

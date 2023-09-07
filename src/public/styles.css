@@ -1,0 +1,47 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#pago {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background-color: #6772e5; /* Color primario de Stripe */
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#pago:hover {
+    background-color: #5067c5; /* Color hover de Stripe */
+}
+
+#pago img {
+    width: 30px; /* Tamaño del icono de Stripe */
+}
