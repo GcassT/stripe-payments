@@ -12,6 +12,10 @@ body {
     height: 100vh;
 }
 
+.container {
+    text-align: center;
+}
+
 h1 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -22,7 +26,7 @@ p {
     margin-bottom: 30px;
 }
 
-#pago {
+#pago, .btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,10 +42,43 @@ p {
     transition: background-color 0.3s ease;
 }
 
-#pago:hover {
+#pago:hover, .btn:hover {
     background-color: #5067c5; /* Color hover de Stripe */
 }
 
 #pago img {
     width: 30px; /* Tamaño del icono de Stripe */
+}
+
+/* Estilos adicionales para la vista de confirmación de pago exitoso */
+.confirmation-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.confirmation-container h1 {
+    font-size: 28px;
+    color: #2ecc71; /* Color verde para indicar éxito */
+}
+
+.confirmation-container p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.confirmation-container .icon {
+    font-size: 48px;
+    color: #2ecc71; /* Color verde para el ícono de éxito */
+}
+
+.confirmation-container a.btn {
+    background-color: #3498db; /* Color azul para el botón de regreso */
+}
+
+.confirmation-container a.btn:hover {
+    background-color: #2980b9; /* Color hover del botón de regreso */
 }
