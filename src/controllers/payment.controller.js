@@ -1,8 +1,8 @@
 import Stripe from "stripe"
-
+import { STRIPE_PRIVATE_KEY } from "../config.js"
 //Configuramos stripe antes de usarlo
 
-const stripe = new Stripe('sk_test_51Nn1oCLvwEnXJnI5PG6P8OF8CXbq6UFCaWASHtDMsvW4KmBpo32Tze31fU8qMiSjXVwOpzpSB3db3fNJLhgUm0YP00ifjJ0MQr')
+const stripe = new Stripe(STRIPE_PRIVATE_KEY)
 
 export const crearSesionDePago = async (req, res) => {
    const sesionPago = await stripe.checkout.sessions.create({
